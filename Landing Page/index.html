@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Reset default margin and padding for all elements */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body and global styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #181515;
+            color: #030202;
+            line-height: 1.6;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #333;
+            color: rgb(14, 10, 10);
+            padding: 20px 0;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Header left side (logo and navigation) */
+        .header-left ul {
+            list-style-type: none;
+        }
+
+        .header-left ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .header-left a {
+            color: rgba(159, 158, 168, 0.768);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Header right side (buttons and search) */
+        .header-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .button {
+            background-color: #ff6600;
+            color: rgb(248, 248, 248);
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-left: 10px;
+            margin-right: 10px
+        }
+
+        .button:hover {
+            background-color: #e55b00;
+        }
+
+        .search input {
+            padding: 8px;
+            border-radius: 10px;
+            margin-bottom: 25px
+            border: none;
+        }
+
+        .search button {
+            background-color: #ff6600;
+            color: rgba(221, 216, 216, 0.944);
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            
+            cursor: pointer;
+        }
+
+        .search button:hover {
+            background-color: #e55b00;
+        }
+
+        /* Hero Section styles */
+        .hero {
+            background: url('hero-image.jpg') no-repeat center center/cover; /* Add your hero image */
+            color: rgba(255, 255, 255, 0.772);
+            text-align: center;
+            padding: 100px 0;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        .hero h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .hero .button {
+            background-color: #ff6600;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+        }
+
+        .hero .button:hover {
+            background-color: #e55b00;
+        }
+
+        /* Our Services Section */
+        .services {
+            background-color: #f9f9f9;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .services h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .services p {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            color: #666;
+        }
+
+        .service-cards {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: #fff;
+            padding: 30px;
+            width: 250px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .service-card i {
+            font-size: 3em;
+            color: #ff6600;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            font-size: 1em;
+            color: #666;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            font-size: 1em;
+        }
+
+        /* Media Queries for responsiveness */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .header-right {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .header-left ul {
+                text-align: center;
+                margin-top: 10px;
+            }
+
+            .header-left ul li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            .service-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .service-card {
+                width: 80%;
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-left">
+                <a href="#" class="logo">
+                    <img src="logo.png" alt="Logo">
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Page</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Testimonials</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header-right">
+                <a href="#" class="button">Buy Now</a>
+                <a href="#" class="button">Request a Consult</a>
+                <div class="search">
+                    <input type="text" placeholder="Search...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>We Are Creative</h1>
+                <h2>Creative Digital Agency</h2>
+                <p>At moffin, we believe in "Transforming Visions into Digital Realities." Our mission is to empower brands by combining creativity with cutting-edge technology to deliver impactful and innovative digital solutions. Whether you're looking to build a captivating website, launch a stunning app, or create a compelling online presence, our team is dedicated to bringing your ideas to life with precision, passion, and purpose. With a focus on delivering exceptional user experiences and strategic digital solutions, we help businesses stand out in today's fast-paced digital landscape. Let us partner with you to shape the future of your brand.</p>
+                <a href="#" class="button">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Services Section -->
+    <section class="services">
+        <div class="box-shadow">
+            <h3>Our Services</h3>
+            <p>We offer a variety of creative and technical services to help you succeed online.</p>
+            <div class="service-cards">
+                <div class="service-card">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Web Development</h3>
+                    <p>Build fast, secure, and responsive websites with modern technologies.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>Graphic Design</h3>
+                    <p>Creating stunning visuals that communicate your brand's identity.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-search"></i>
+                    <h3>SEO Optimization</h3>
+                    <p>Boost your website's visibility and reach more customers with SEO.</p>
+                </div>
+            </div>
+        </div>
+    </
